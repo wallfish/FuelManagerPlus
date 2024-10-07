@@ -144,14 +144,18 @@ h4 {
     align-items: center;
 }
 
-.reset_btn button {
+.reset_btn {
     display: flex;
     padding: 0px;
     border-radius: 360px;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     justify-content: center;
     align-items: center;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    
 }
 
 input {
@@ -167,7 +171,25 @@ input {
     border-width: 0px;
 }
 
-button {
+.feedback {
+    display: flex;
+    position: relative;
+    top: -10px;
+    font-size: 14px;
+    color: #F54350;
+    margin-bottom: -16px;
+}
+
+.ctas {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.find_button {
+    display: flex;
     color: white;
     background-color: #F54350;
     border: none;
@@ -176,6 +198,7 @@ button {
     width: 100%;
     cursor: pointer;
     border-color: #000000;
+    text-align: center;
 }
 
 
@@ -186,6 +209,5 @@ button {
 }
 
 @keyframes fontIncrease {
-    
     100% {color: #fff;}
 }

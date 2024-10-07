@@ -69,28 +69,25 @@
                             000
                         </div>    
                     </div>
-                    <div class="reset_btn">
-                        <button>
+                </div>
+
+                <form class="input_wrappers">
+                    <input class="fuel_details" id="entry1" type="text" placeholder="First KM Reading @ Reserve Fuel">
+                    <div class="feedback"></div>
+                    <input class="fuel_details" id="entry2" type="text" placeholder="Liters of Fuel Added to Tank">
+                    <input class="fuel_details" id="entry3" type="text" placeholder="Second KM Reading at Reserve">
+                    <input class="fuel_details" id="entry4" type="text" placeholder="Current Cost / Liter">
+                    <div class="ctas">
+                        <input class="find_button"  id="find_button" type="submit" value="Find">
+                        <button class="reset_btn"  id="reset"type="reset"> 
                             <img src="asset/refresh-arrow.svg" alt="" width="16px" height="16px">
                         </button>
                     </div>
-                </div>
-
-                <div class="input_wrappers">
-                    <input name="fuel_details" type="text" placeholder="First KM Reading @ Reserve Fuel">
-                    <input name="fuel_details" type="text" placeholder="Liters of Fuel Added to Tank">
-                    <input name="fuel_details" type="text" placeholder="Second KM Reading at Reserve">
-                    <input name="fuel_details" type="text" placeholder="Current Cost / Liter">
-                </div>
-                <div class="button_wrapper">
-                    <button type="button">
-                        FIND
-                    </button>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    
     <script src="scripts.js"></script>
 </body>
 </html>
