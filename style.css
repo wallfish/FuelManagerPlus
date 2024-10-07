@@ -179,7 +179,7 @@ button {
 
 
 .focus {
-    outline: 3px solid #fff;
+    outline: 3px solid #99e500;
     outline-offset: -3px;
     animation: fontIncrease .6s forwards ;
 }
