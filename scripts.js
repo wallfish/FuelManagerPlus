@@ -10,6 +10,10 @@
 //     };
 // });
 
+// buttonEvent.addEventListener('focus', () => {
+//     console.log('click event occured fish!');
+// });
+
 
 
 const itemsGone = document.querySelectorAll('.title_answer');
@@ -29,7 +33,11 @@ itemsGone.forEach (items => {
 
 
 
-const buttonEvent = document.querySelectorAll('input');
+// --------------------------------------
+// Style for focus inputs
+// --------------------------------------
+
+const buttonEvent = document.querySelectorAll('.fuel_details');
 
 console.log(buttonEvent);
 
@@ -40,20 +48,50 @@ buttonEvent.forEach (input => {
     })
 });
 
-
 buttonEvent.forEach (input => {
     if (input.addEventListener('focusout',() => {
         input.classList.remove('focus');
                 }
             )
         );
+});
 
+// --------------------------------------
+// Prevent refresh & store value of inputs
+// --------------------------------------
+const form = document.querySelector('.input_wrappers');
+
+const feedback = document.querySelector('.feedback')
+
+form.addEventListener('submit', formEvent => {
+    formEvent.preventDefault();
+
+    // RegEx
+
+    const entryField = form.entry1.value;
+    const entryPattern = /^[0-9]{2,7}$/;
+
+    if (entryPattern.test(entryField)) {
+        // feedback good
+    } else {
+        // feedback bad
+        feedback.textContent='Not correct data';
+        feedback.style.color = "red";
+    }
+
+    console.log();
 
 });
 
 
-// buttonEvent.addEventListener('focus', () => {
-//     console.log('click event occured fish!');
-// });
+
+
+
+
+
+
+
+
+
 
 
