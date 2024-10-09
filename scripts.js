@@ -12,12 +12,29 @@
 
 
 
+const itemsGone = document.querySelectorAll('.title_answer');
+
+itemsGone.forEach (items => {
+    console.log(items.innerText);
+    items.addEventListener('click',i=>{
+        i.target.remove();
+    })
+});
+
+
+
+
+
+
+
+
+
 const buttonEvent = document.querySelectorAll('input');
 
 console.log(buttonEvent);
 
 buttonEvent.forEach (input => {
-    input.addEventListener('focus', () => {
+    input.addEventListener('click', () => {
         console.log('clickfish!');
         input.classList.add('focus');
     })
