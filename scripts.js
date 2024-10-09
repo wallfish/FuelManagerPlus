@@ -1,6 +1,5 @@
 // const formChange = document.querySelectorAll('h3');
 
-
 // formChange.forEach ( fuel => {
 //     if(fuel.textContent.includes('error')) {
 //         fuel.classList.add('error');
@@ -14,75 +13,109 @@
 //     console.log('click event occured fish!');
 // });
 
+// const itemsGone = document.querySelectorAll('.title_answer');
 
-
-const itemsGone = document.querySelectorAll('.title_answer');
-
-itemsGone.forEach (items => {
-    console.log(items.innerText);
-    items.addEventListener('click',i=>{
-        i.target.remove();
-    })
-});
-
-
-
-
-
-
-
+// itemsGone.forEach (items => {
+//     console.log(items.innerText);
+//     items.addEventListener('click',i=>{
+//         i.target.remove();
+//     })
+// });
 
 
 // --------------------------------------
 // Style for focus inputs
 // --------------------------------------
 
-const buttonEvent = document.querySelectorAll('.fuel_details');
+const highlightInput = document.querySelectorAll('.fuel_details');
 
-console.log(buttonEvent);
 
-buttonEvent.forEach (input => {
-    input.addEventListener('click', () => {
-        console.log('clickfish!');
+highlightInput.forEach (input => {
+
+    if (input.addEventListener('focus', () => {
         input.classList.add('focus');
-    })
-});
+                }
+            )
+        );
 
-buttonEvent.forEach (input => {
     if (input.addEventListener('focusout',() => {
         input.classList.remove('focus');
                 }
             )
         );
+
+    if (input.addEventListener('keypress', () => {
+        input.value = input.value.toUpperCase();
+                }
+            )
+        );
+
 });
 
-// --------------------------------------
-// Prevent refresh & store value of inputs
-// --------------------------------------
-const form = document.querySelector('.input_wrappers');
 
-const feedback = document.querySelector('.feedback')
+const formContainer = document.querySelector('.input_wrappers');
 
-form.addEventListener('submit', formEvent => {
+const validationText = document.querySelector('.feedback');
+
+const validationBorder = document.querySelector('.fuel_details');
+
+
+formContainer.addEventListener('keyup', formEvent => {
+
     formEvent.preventDefault();
 
-    // RegEx
+    const validationValue = formContainer.entry1.value;
 
-    const entryField = form.entry1.value;
-    const entryPattern = /^[0-9]{2,7}$/;
+    const validationPattern = /^[0-9]{2,7}$/;
 
-    if (entryPattern.test(entryField)) {
-        // feedback good
-        feedback.textContent='Correct data';
+    // console.log(validationValue);
+
+    if (validationPattern.test(validationValue)) {
+
+        validationText.textContent='';
+        
+        validationBorder.style.outline = "3px solid green";
+
+        validationText.style.color = "green";
+
+        validationText.style.animation = "heightDecrease .6s forwards";
+    
     } else {
-        // feedback bad
-        feedback.textContent='Not correct data';
-        feedback.style.color = "red";
-    }
+        
+        validationText.textContent='Only numbers between 2-7 digits';
+        
+        validationBorder.style.outline = "3px solid red";
 
-    console.log();
+        validationText.style.color = "red";
 
+        validationText.style.animation = "heightIncrease .6s forwards";
+
+    };
+    
 });
+
+
+
+const newEveryInput = document.querySelectorAll('.fuel_details');
+
+console.log(newEveryInput);
+
+
+
+
+newEveryInput.forEach (input => {
+
+    input.addEventListener('keyup', () =>{
+        console.log(input.value);
+    });
+});
+
+
+
+
+
+
+
 
 
 
