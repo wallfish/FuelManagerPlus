@@ -73,6 +73,7 @@ form.addEventListener('submit', formEvent => {
 
     if (entryPattern.test(entryField)) {
         // feedback good
+        feedback.textContent='Correct data';
     } else {
         // feedback bad
         feedback.textContent='Not correct data';
