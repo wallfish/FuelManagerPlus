@@ -78,13 +78,19 @@ formContainer.addEventListener('keyup', formEvent => {
 
 
 const newEveryInput = document.querySelectorAll('.fuel_details');
-const newValue = newEveryInput[0].value;
 
 console.log(newEveryInput);
 
 newEveryInput.forEach (input => {
     input.addEventListener('keyup', () =>{
-        console.log(newValue);
+
+        console.log(input.value);
+
+        validationPattern.test(validationValue);
+
+        validationText.textContent='';
+
+        
     });
 });
 
