@@ -1,31 +1,3 @@
-// const formChange = document.querySelectorAll('h3');
-
-// formChange.forEach ( fuel => {
-//     if(fuel.textContent.includes('error')) {
-//         fuel.classList.add('error');
-//     }
-//      if (fuel.textContent.includes('success')) {
-//         fuel.classList.add('success');
-//     };
-// });
-
-// buttonEvent.addEventListener('focus', () => {
-//     console.log('click event occured fish!');
-// });
-
-// const itemsGone = document.querySelectorAll('.title_answer');
-
-// itemsGone.forEach (items => {
-//     console.log(items.innerText);
-//     items.addEventListener('click',i=>{
-//         i.target.remove();
-//     })
-// });
-
-
-// --------------------------------------
-// Style for focus inputs
-// --------------------------------------
 
 const highlightInput = document.querySelectorAll('.fuel_details');
 
@@ -58,6 +30,15 @@ const formContainer = document.querySelector('.input_wrappers');
 const validationText = document.querySelector('.feedback');
 
 const validationBorder = document.querySelector('.fuel_details');
+
+
+formContainer.addEventListener('submit', formEvent => {
+
+    formEvent.preventDefault();
+
+    }
+);
+
 
 
 formContainer.addEventListener('keyup', formEvent => {
@@ -97,21 +78,54 @@ formContainer.addEventListener('keyup', formEvent => {
 
 
 const newEveryInput = document.querySelectorAll('.fuel_details');
+const newValue = newEveryInput[0].value;
 
 console.log(newEveryInput);
 
-
-
-
 newEveryInput.forEach (input => {
-
     input.addEventListener('keyup', () =>{
-        console.log(input.value);
+        console.log(newValue);
     });
 });
 
 
 
+
+
+
+
+
+// --------------------------------------------------
+
+
+// const formChange = document.querySelectorAll('h3');
+
+// formChange.forEach ( fuel => {
+//     if(fuel.textContent.includes('error')) {
+//         fuel.classList.add('error');
+//     }
+//      if (fuel.textContent.includes('success')) {
+//         fuel.classList.add('success');
+//     };
+// });
+
+// buttonEvent.addEventListener('focus', () => {
+//     console.log('click event occured fish!');
+// });
+
+// const itemsGone = document.querySelectorAll('.title_answer');
+
+// itemsGone.forEach (items => {
+//     console.log(items.innerText);
+//     items.addEventListener('click',i=>{
+//         i.target.remove();
+//     })
+// });
+
+
+// --------------------------------------
+// Style for focus inputs
+// --------------------------------------
 
 
 
