@@ -32,12 +32,11 @@ const validationText = document.querySelector('.feedback');
 const validationBorder = document.querySelector('.fuel_details');
 
 
-formContainer.addEventListener('submit', formEvent => {
 
-    formEvent.preventDefault();
 
-    }
-);
+
+
+
 
 
 
@@ -86,9 +85,7 @@ newEveryInput.forEach (input => {
 
         console.log(input.value);
 
-        validationPattern.test(validationValue);
 
-        validationText.textContent='';
 
         
     });
